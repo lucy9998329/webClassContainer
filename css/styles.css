@@ -6,5 +6,74 @@
     border-radius: 10px;
     font-size: 40px;
     background-color: #09c;
-    
+
+}
+.container {
+    display: grid;
+    /*grid-template-columns: 1fr 0.5fr 2fr 1fr;*/
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    grid-template-columns: 1fr repeat(5, 0.5 fr);
+    /*grid-template-rows: 200px;*/
+    grid-auto-rows: 150px;
+    grid-gap: 20px;
+
+    justify-content: space-around;
+}
+
+.item01 {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    order: 1;
+}
+
+.item02 {
+    background-color: yellow;
+    grid-column: span 2;
+
+    order: 2;
+
+}
+.item03{
+    order: 3;
+
+}
+.item04{
+    order: 4;
+
+}
+.item05{
+    order: 5;
+
+}
+.item06{
+    order: 6;
+
+}
+.item07{
+    order: 7;
+
+}
+.item08{
+    order: 8;
+
+}
+.item09{
+    order: 9;
+
+}
+.item10{
+    order: 10;
+
+}
+@media screen and (min-width: 500px){
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .item02{
+        order: 1;
+    }
+    .item01{
+        order: 2;
+    }
 }
